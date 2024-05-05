@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c997763d61ddc34c8811cb699f7a478, type: 3}
+  m_Name: LamborghiniGearConfigData
+  m_EditorClassIdentifier: 
+  _gearMinPitch: 1
+  _gearMaxPitch: 3
+  _gearPitchRecoveryRate: 0.5
+  _gearBreathMultiplier: 0.75
+  _gearBreathDuration: 0.234
+  _gearToleranceRate: 0.05
+  _gearType: 0
+  _gearCount: 5
+  _maxGearSpeedArray:
+  - 52.89
+  - 89.85
+  - 127.2
+  - 174.13
+  - 241.69
