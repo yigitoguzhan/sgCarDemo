@@ -144,7 +144,7 @@ namespace SuperGearsGames.Demo.Layers.Application.Game.Managers
         #region Activate: State: Finished
 
         public void ActivateFinishedState()
-        {
+        {           
             GameplayData.StateData.ChangeState(GameplayState.Finished);
         }
 

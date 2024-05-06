@@ -43,7 +43,7 @@ namespace SuperGearsGames.Demo.Layers.Application.Game.Managers
 
         private void Update()
         {            
-            if (!_isReadyToUpdate)
+            if (!_isReadyToUpdate || Game == null)
             {
                 return;
             }

@@ -1,4 +1,5 @@
 using SuperGearsGames.Demo.Layers.Application.Game;
+using UnityEngine;
 
 namespace SuperGearsGames.Demo.Layers.Presentation.Game
 {
@@ -76,8 +77,8 @@ namespace SuperGearsGames.Demo.Layers.Presentation.Game
             _gameplayController = MVCFactory.CreateController<GameplayController, GameplayModel, GameplayModelData, GameplayView>(model, _view.GameplayView);
         }
 
-        #endregion  
-        
+        #endregion
+
         #region Initialize: InnerMVCs: GameEnd
 
         private void InitializeGameEndMVC()
@@ -92,7 +93,7 @@ namespace SuperGearsGames.Demo.Layers.Presentation.Game
         #region DeInitialize: InnerMVCs
 
         private void DeInitializeInnerMVCs()
-        {         
+        {
         }
 
         #endregion
@@ -148,12 +149,12 @@ namespace SuperGearsGames.Demo.Layers.Presentation.Game
 
         private void OnGameplayStateChanged(object sender, GameplayStateChangedEventArgs e)
         {
-            if(e.State == GameplayState.Finished)
+            if (e.State == GameplayState.Finished)
             {
                 InitializeGameEndMVC();
                 _gameEndController.Show();
             }
-        } 
+        }
 
         #endregion
 

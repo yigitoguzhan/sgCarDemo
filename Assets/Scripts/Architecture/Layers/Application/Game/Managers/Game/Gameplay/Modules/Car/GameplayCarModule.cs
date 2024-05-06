@@ -134,7 +134,10 @@ namespace SuperGearsGames.Demo.Layers.Application.Game.Managers
 
             if (carZPos + gameplayCarData.ConfigData.CarForwardPoint >= CurrentRaceData.ConfigData.RaceLength)
             {
-                GameManagerContainer.Instance.Game.Gameplay.ActivateFinishedState();
+                if(GameplayData.StateData.State != GameplayState.Finished)
+                {
+                    GameManagerContainer.Instance.Game.Gameplay.ActivateFinishedState();
+                }
             }
         }
 
