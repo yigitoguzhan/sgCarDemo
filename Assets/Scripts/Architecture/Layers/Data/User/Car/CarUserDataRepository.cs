@@ -96,6 +96,7 @@ namespace SuperGearsGames.Demo.Layers.Data.Repositories
             if (!PlayerPrefs.HasKey("CurrentCarId"))
             {
                 PlayerPrefs.SetString("CurrentCarId", "0");
+                CurrentCarId = PlayerPrefs.GetString("CurrentCarId");
             }
             else
             {
