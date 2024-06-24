@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _btnGarage: {fileID: 2633202846542124815}
+  _btnRestart: {fileID: 3218197814293630660}
 --- !u!1 &6583939697013609262
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1483435141686039600
 RectTransform:
   m_ObjectHideFlags: 0

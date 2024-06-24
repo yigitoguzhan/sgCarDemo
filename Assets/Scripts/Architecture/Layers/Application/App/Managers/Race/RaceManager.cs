@@ -16,7 +16,7 @@ namespace SuperGearsGames.Demo.Layers.Application.Managers
 
         #region Data
 
-        public RaceConfigData CurrentRaceConfigData { get; private set; }
+        public RaceConfigData CurrentRaceConfigData => ScriptableConfigRepositoryContainer.Instance.RaceScriptableConfig.GetRaceConfigData("0");
 
         #endregion
 
@@ -64,7 +64,7 @@ namespace SuperGearsGames.Demo.Layers.Application.Managers
         public void InitiateRace(bool allowStartRace = true)
         {
             //Add RaceUserData if time left, and get the RaceConfigData by ActiveRaceData's Id
-            CurrentRaceConfigData = ScriptableConfigRepositoryContainer.Instance.RaceScriptableConfig.GetRaceConfigData("0");
+            //CurrentRaceConfigData = ScriptableConfigRepositoryContainer.Instance.RaceScriptableConfig.GetRaceConfigData("0");
 
             if (allowStartRace)
             {
@@ -105,6 +105,15 @@ namespace SuperGearsGames.Demo.Layers.Application.Managers
 
         #endregion
 
+        #region Race: Current: Restart
+
+        public void RestartCurrentRace()
+        {
+            //CurrentRaceConfigData = ScriptableConfigRepositoryContainer.Instance.RaceScriptableConfig.GetRaceConfigData("0");
+            LayerContainer.Instance.Presentation.ChangePresentationState(SceneName.Game);
+        }
+
+        #endregion
 
         #region Event: OnPresentationStateChangeCompleted
 
@@ -112,7 +121,7 @@ namespace SuperGearsGames.Demo.Layers.Application.Managers
         {
             if (e.PreviousSceneName == SceneName.Game)
             {
-                CurrentRaceConfigData = null;
+                //CurrentRaceConfigData = null;
             }
         }
 

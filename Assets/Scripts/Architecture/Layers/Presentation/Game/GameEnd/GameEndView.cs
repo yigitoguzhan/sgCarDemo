@@ -15,6 +15,8 @@ namespace SuperGearsGames.Demo.Layers.Presentation.Game
 
         [SerializeField]
         private Button _btnGarage;
+        [SerializeField]
+        private Button _btnRestart;
 
         #endregion
 
@@ -56,22 +58,37 @@ namespace SuperGearsGames.Demo.Layers.Presentation.Game
 
         #endregion
 
+
+        #region Event: OnBtnGarageClicked
+
         private void OnBtnGarageClicked()
         {
             AppManagerContainer.Instance.Race.EndCurrentRace();
         }
+
+        #endregion
+
+        #region Event: OnBtnRestartClicked
+
+        private void OnBtnRestartClicked()
+        {
+            AppManagerContainer.Instance.Race.RestartCurrentRace();
+        }
+
+        #endregion
 
         #region Events: Add | Remove
 
         protected override void OnAddEvents()
         {
             _btnGarage.onClick.AddListener(OnBtnGarageClicked);
-
+            _btnRestart.onClick.AddListener(OnBtnRestartClicked);
         }
 
         protected override void OnRemoveEvents()
         {
             _btnGarage.onClick.RemoveListener(OnBtnGarageClicked);
+            _btnRestart.onClick.RemoveListener(OnBtnRestartClicked);
         }
 
         #endregion
